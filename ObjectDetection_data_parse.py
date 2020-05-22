@@ -76,12 +76,6 @@ def make_csv(csv_path,train_image,train_annotation,annotation_format,val_img=Non
 		else:
 			add_to_csv_path_coco(csv_path,train_image,train_annotation,annotation_format,1)
 
-csv_path="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\CSV\\test.csv"
-train_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\images\\"
-train_anno_pascal="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\annotations\\pascalvoc_xml\\"
-train_anno_yolo="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\annotations\\yolo_txt\\"
-
-make_csv(csv_path,train_img,train_anno_yolo,'yolo',split=0.7)
 
 def find_classes_yolo(names_path):
 	classes=[]
@@ -92,7 +86,6 @@ def find_classes_yolo(names_path):
 			classes[i]=classname[:-1]
 	return classes
 
-# make_json_yolo("C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\aerial.names")
 def find_classes_pascal(image_path,anno_path):
 	classes=[]
 	for curr_image_path in findImages(image_path):
@@ -115,5 +108,17 @@ def find_classes_coco(anno_path):
 			classes.append(class_name)
 	return classes
 
-print(find_classes_coco("C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\annotations\\instances_val2017.json"))
-# print(classes)
+
+#testing
+# csv_path="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\CSV\\test.csv"
+# train_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\images\\"
+
+# train_anno_pascal="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\annotations\\pascalvoc_xml\\"
+# train_anno_yolo="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\annotations\\yolo_txt\\"
+# names_path_yolo="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\aerial.names"
+
+# val_image="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection - Copy\\images\\"
+# val_anno_yolo="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection - Copy\\annotations\\yolo_txt\\"
+# val_anno_pascal="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection - Copy\\annotations\\pascalvoc_xml\\"
+
+# make_csv(csv_path,train_img,train_anno_yolo,'yolo',val_image,val_anno_yolo)

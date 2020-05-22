@@ -52,10 +52,10 @@ def find_classes(img_path):
 			classes.append(class_name)
 	return classes
 
-
-csv_path="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\Aerial Object Detection\\CSV\\test.csv"
-train_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\bikes_persons_dataset\\"
-val_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\bikes_persons_dataset - Copy\\"
-make_csv(csv_path,train_img,split=0.7)
-print(find_classes(train_img))
+#testing
+# csv_path="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\CSV\\test.csv"
+# train_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\bikes_persons_dataset\\"
+# val_img="C:\\Users\\yadur\\Downloads\\Edge\\Dataset\\bikes_persons_dataset - Copy\\"
+# make_csv(csv_path,train_img,val_img,split=0.7)
+# # print(find_classes(train_img))
 
